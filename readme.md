@@ -19,6 +19,7 @@ Sitio web  de recetas desarrollado con HTML5 y CSS.
 
 ## 📁 Estructura
 
+```text
 recetas-caseras/
 │
 ├── index.html
@@ -33,6 +34,7 @@ recetas-caseras/
 │
 └── img/
     └── (imágenes y logo)
+```
 
 ---
 
