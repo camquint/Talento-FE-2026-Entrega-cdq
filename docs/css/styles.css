@@ -351,3 +351,198 @@ iframe{
     text-align: center;
     margin-top: 40px;
 }
+
+/* RESPONSIVE
+
+/* ---- Tablet ---- */
+@media (max-width: 768px){
+
+    /* HEADER */
+
+    .header .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .logo-img{
+        width: 180px;
+        height: auto;
+    }
+
+    /* NAV */
+
+    .nav ul{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav{
+        font-size: 16px;
+    }
+
+    /* INICIO */
+
+    .inicio{
+        height: 60vh;
+    }
+
+    .contenidoInicio h2{
+        font-size: 2rem;
+    }
+
+    .contenidoInicio p{
+        font-size: 18px;
+    }
+
+    /* RECETAS */
+
+    .cardsContainer{
+        gap: 20px;
+    }
+
+    .card{
+        width: 320px;
+    }
+
+    /* RESEÑAS */
+
+    .reseniasContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reseniaCard{
+        width: 90%;
+        max-width: 450px;
+    }
+
+    /* FOOTER */
+
+    .footerContainer{
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .linkRedes{
+        align-items: center;
+    }
+
+    /* RECETA */
+
+    .receta{
+        padding: 30px;
+    }
+
+    .receta img{
+        width: 80%;
+    }
+
+}
+
+
+/* ---- Celular ---- */
+@media (max-width: 480px){
+
+    /* HEADER */
+
+    .header{
+        padding: 15px;
+    }
+
+    .logo-img{
+        width: 150px;
+    }
+
+    .nav{
+        font-size: 15px;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* INICIO */
+
+    .inicio{
+        height: 50vh;
+    }
+
+    .contenidoInicio h2{
+        font-size: 1.6rem;
+    }
+
+    .contenidoInicio p{
+        font-size: 16px;
+    }
+
+    .boton{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    /* RECETAS */
+
+    .recetas{
+        padding: 60px 15px;
+    }
+
+    .tituloSeccion{
+        font-size: 28px;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    /* RESEÑAS */
+
+    .resenias{
+        padding: 60px 15px;
+    }
+
+    .reseniaCard{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .reseniaCard img{
+        width: 80px;
+        height: 80px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+        font-size: 14px;
+    }
+
+    .footerContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .cajaFooter{
+        text-align: center;
+    }
+
+    /* RECETA */
+
+    .receta{
+        padding: 20px;
+    }
+
+    .receta img{
+        width: 100%;
+    }
+
+    iframe{
+        height: 250px;
+    }
+
+}
