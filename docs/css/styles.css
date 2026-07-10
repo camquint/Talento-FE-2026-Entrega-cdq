@@ -105,6 +105,7 @@ body{
     background-color: #f1a335f6;
     color: white;
     text-decoration: none;
+    border: none;
     border-radius: 30px;
 }
 
@@ -172,167 +173,7 @@ body{
     font-weight: bold;
 }
 
-/* API RECETAS */
-
-.recetasAPI{
-    padding: 80px 20px;
-    background-color: #f8f8f8;
-}
-
-.descripcionAPI{
-    text-align: center;
-    color: #666;
-    margin-bottom: 35px;
-}
-
-.cardAPI{
-    width: 300px;
-}
-
-.cardAPI img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.cardAPI a{
-    display: inline-block;
-    margin-top: 15px;
-    color: #f1a335f6;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.cardAPI a:hover{
-    text-decoration: underline;
-}
-
-.btnAPI{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-
-/* RESEÑAS */
-
-.resenias{
-    padding: 80px 20px;
-    background-color: whitesmoke;
-}
-
-.reseniasContainer{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.reseniaCard{
-    width: 320px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
-}
-
-.reseniaCard:hover{
-    transform: translateY(-5px)
-}
-
-.textoResenia{
-    margin-bottom: 20px;
-    color: #444;
-    font-style: italic;
-    line-height: 1.6;
-    text-align: center;
-}
-
-.reseniaCard img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 15px;
-}
-
-.reseniaCard h4{
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.reseniaCard span{
-    display: block;
-    text-align: center;
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-
-/* FOOTER */
-
-.footer{
-    background-color: #111;
-    color: #eee;
-    padding: 40px 20px 10px;
-    font-size: 16px;
-}
-
-.footerContainer{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.cajaFooter h4{
-    margin-bottom: 15px;
-}
-
-.cajaFooter p{
-    color: #ccc;
-    line-height: 1.6;
-}
-
-.cajaFooter ul{
-    list-style: none;
-}
-
-.cajaFooter ul li{
-    margin-bottom: 10px;
-}
-
-.cajaFooter a{
-    color: #ccc;
-    text-decoration: none;
-}
-
-.cajaFooter a:hover{
-    color: white;
-}
-
-.linkRedes{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footerBottom{
-    border-top: 1px solid #333;
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: #aaa;
-}
-
-
-/* /RECETAS */
+/* /RECETAS (individual) */
 
 .recetaMain{
     padding: 20px 20px;
@@ -393,8 +234,7 @@ iframe{
     margin-top: 40px;
 }
 
-
-/* UTENSILIOS */
+/* CARRITO - UTENSILIOS */
 
 .utensilios{
     padding: 80px 20px;
@@ -516,39 +356,173 @@ iframe{
     padding: 12px;
 }
 
-/* FOOTER */
+/* API RECETAS */
 
-.footer{
-    font-size: 14px;
+.recetasAPI{
+    padding: 80px 20px;
+    background-color: #f8f8f8;
 }
 
-.footerContainer{
-    flex-direction: column;
-    align-items: center;
+.descripcionAPI{
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.cardAPI{
+    width: 300px;
+}
+
+.cardAPI img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardAPI a{
+    display: inline-block;
+    margin-top: 15px;
+    color: #f1a335f6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cardAPI a:hover{
+    text-decoration: underline;
+}
+
+.btnAPI{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#btnNuevaReceta{
+    padding: 15px 35px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* RESEÑAS */
+
+.resenias{
+    padding: 80px 20px;
+    background-color: whitesmoke;
+}
+
+.reseniasContainer{
+    display: flex;
+    justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
-.cajaFooter{
+.reseniaCard{
+    width: 320px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.reseniaCard:hover{
+    transform: translateY(-5px)
+}
+
+.textoResenia{
+    margin-bottom: 20px;
+    color: #444;
+    font-style: italic;
+    line-height: 1.6;
     text-align: center;
 }
 
-    /* RECETA */
-
-.receta{
-    padding: 20px;
+.reseniaCard img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
 }
 
-.receta img{
-    width: 100%;
+.reseniaCard h4{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-iframe{
-    height: 250px;
+.reseniaCard span{
+    display: block;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 
+/* FOOTER */
 
-    /* RESPONSIVE
+.footer{
+    background-color: #111;
+    color: #eee;
+    padding: 40px 20px 10px;
+    font-size: 16px;
+}
+
+.footerContainer{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.cajaFooter h4{
+    margin-bottom: 15px;
+}
+
+.cajaFooter p{
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.cajaFooter ul{
+    list-style: none;
+}
+
+.cajaFooter ul li{
+    margin-bottom: 10px;
+}
+
+.cajaFooter a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+.cajaFooter a:hover{
+    color: white;
+}
+
+.linkRedes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerBottom{
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: #aaa;
+}
+
+
+    /* RESPONSIVE */
 
 /* ---- Tablet ---- */
 @media (max-width: 768px){
@@ -727,5 +701,17 @@ iframe{
     .reseniaCard img{
         width: 80px;
         height: 80px;
+    }
+
+    /* FOOTER */
+
+    .footerContainer{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .cajaFooter{
+        text-align: center;
     }
 }

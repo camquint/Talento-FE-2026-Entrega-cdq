@@ -202,8 +202,8 @@ async function cargarRecetas(){
             "<img src='" + receta.strMealThumb + "' alt='" + receta.strMeal + "'>" +
             "<div class='contenidoCard'>" +
             "<h3>" + receta.strMeal + "</h3>" +
-            "<p><strong>Categoría:</strong> " + receta.strCategory + "</p>" +
-            "<p><strong>Origen:</strong> " + receta.strArea + "</p>"
+            "<p><strong>Categoría:</strong> " + (receta.strCategory ? receta.strCategory : "-") + "</p>" +
+            "<p><strong>Origen:</strong> " + (receta.strArea ? receta.strArea : "-") + "</p>"
             + enlace +
             "</div>";
 
