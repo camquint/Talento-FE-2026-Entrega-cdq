@@ -18,6 +18,7 @@
                     <ul>
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#recetas">Recetas</a></li>
+                        <li><a href="#utensilios">Comprar utensilios</a></li>
                         <li><a href="#info">Sobre nosotros</a></li>
                     </ul>
                 </nav>
@@ -101,6 +102,56 @@
 
                     </a>
 
+                </div>
+
+            </section>
+
+            <!-- UTENSILIOS -->
+
+            <section class="utensilios" id="utensilios">
+                <h2 class="tituloSeccion">Utensilios recomendados</h2>
+
+                <div class="tiendaContainer">
+
+                    <div class="productosLista">
+                        <h3>Productos disponibles</h3>
+
+                        <ul id="listaProductos"><!-- JavaScript --></ul>
+                    </div>
+
+                    <aside class="carrito">
+
+                        <h3>🛒 Carrito (<span id="cantidadCarrito">0</span>)</h3>
+                        <ul id="itemsCarrito"></ul>
+
+                        <div class="totalCarrito">
+                            <span>Total:</span>
+                            <strong id="precioTotal">$0</strong>
+                        </div>
+
+                        <div class="accionesCarrito">
+                            <button id="btnVaciar" class="btnSecundario">Vaciar</button>
+                            <button id="btnComprar" class="boton">Comprar</button>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+            <!-- OTRAS RECETAS [API] -->
+        
+            <section class="apiRecetas">
+
+                <h2 class="tituloSeccion">Inspirate con más recetas</h2>
+
+                <p class="descripcionAPI">Descubrí recetas aleatorias.</p>
+                
+                <div id="contenedorRecetasAPI" class="cardsContainer"><!-- JavaScript --></div>
+
+                <div class="btnAPI">
+                    <button id="btnNuevaReceta" class="boton">Mostrar otra receta</button>
                 </div>
 
             </section>
@@ -200,6 +251,9 @@
             </div>
 
         </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/carrito.js"></script>
 
     </body>
 

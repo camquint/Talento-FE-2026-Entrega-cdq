@@ -172,6 +172,47 @@ body{
     font-weight: bold;
 }
 
+/* API RECETAS */
+
+.recetasAPI{
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+}
+
+.descripcionAPI{
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.cardAPI{
+    width: 300px;
+}
+
+.cardAPI img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardAPI a{
+    display: inline-block;
+    margin-top: 15px;
+    color: #f1a335f6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cardAPI a:hover{
+    text-decoration: underline;
+}
+
+.btnAPI{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
 
 /* RESEÑAS */
 
@@ -352,7 +393,162 @@ iframe{
     margin-top: 40px;
 }
 
-/* RESPONSIVE
+
+/* UTENSILIOS */
+
+.utensilios{
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.tiendaContainer{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.productosLista h3,
+.carrito h3{
+    margin-bottom: 20px;
+}
+
+.productosLista ul,
+.carrito ul{
+    list-style: none;
+}
+
+.productoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.nombreProducto{
+    font-weight: bold;
+    flex: 1;
+}
+
+.precioProducto{
+    margin: 0 20px;
+    color: #666;
+}
+
+.btnAgregar{
+    padding: 8px 18px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f1a335f6;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btnAgregar:hover{
+    background-color: #dd8d1b;
+}
+
+.carrito{
+    background-color: #fafafa;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.itemCarrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.itemCarrito button{
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    background-color: #d9534f;
+    color: white;
+    cursor: pointer;
+}
+
+.totalCarrito{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 18px;
+}
+
+.accionesCarrito{
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.accionesCarrito button{
+    flex: 1;
+}
+
+.botonSecundario{
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botonSecundario:hover{
+    background-color: #c9c9c9;
+}
+
+#btnComprar{
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+/* FOOTER */
+
+.footer{
+    font-size: 14px;
+}
+
+.footerContainer{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.cajaFooter{
+    text-align: center;
+}
+
+    /* RECETA */
+
+.receta{
+    padding: 20px;
+}
+
+.receta img{
+    width: 100%;
+}
+
+iframe{
+    height: 250px;
+}
+
+
+
+    /* RESPONSIVE
 
 /* ---- Tablet ---- */
 @media (max-width: 768px){
@@ -404,6 +600,12 @@ iframe{
 
     .card{
         width: 320px;
+    }
+
+    /* UTENSILIOS */
+
+    .tiendaContainer{
+        grid-template-columns: 1fr;
     }
 
     /* RESEÑAS */
@@ -499,6 +701,18 @@ iframe{
         width: 100%;
     }
 
+    /* UTENSILIOS */
+
+    .prodItem{
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .accionesCarrito{
+        flex-direction: column;
+    }
+
     /* RESEÑAS */
 
     .resenias{
@@ -514,35 +728,4 @@ iframe{
         width: 80px;
         height: 80px;
     }
-
-    /* FOOTER */
-
-    .footer{
-        font-size: 14px;
-    }
-
-    .footerContainer{
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .cajaFooter{
-        text-align: center;
-    }
-
-    /* RECETA */
-
-    .receta{
-        padding: 20px;
-    }
-
-    .receta img{
-        width: 100%;
-    }
-
-    iframe{
-        height: 250px;
-    }
-
 }
