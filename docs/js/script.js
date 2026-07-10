@@ -77,7 +77,7 @@ function mostrarProductos(){
         item.classList.add("productoItem");
 
         item.innerHTML = `<span class="nombreProducto">${producto.nombre}</span>
-        <span class="precioProducto">$${producto.precio}</span>
+        <span class="precioProducto">$${producto.precio.toLocaleString("es-AR")}</span>
         <button class="btnAgregar">Agregar</button>`;
 
         lista.appendChild(item);
@@ -90,7 +90,24 @@ function mostrarProductos(){
 }
 
 function agregarProducto(producto){
-    carrito.push(producto);
+    let encontrado = false;
+
+    for(let item of carrito){
+        if(item.id == producto.id){
+            item.cantidad++;
+            encontrado = true;
+        }
+    }
+
+    if(!encontrado){
+        carrito.push({
+            id: producto.id,
+            nombre: producto.nombre,
+            precio: producto.precio,
+            cantidad: 1
+        });
+    }
+
     actualizarCarrito();
 }
 
@@ -115,29 +132,50 @@ function actualizarCarrito(){
         lista.innerHTML = "<li>El carrito está vacío.</li>";
     }
     else{
-
         for(let i = 0; i < carrito.length; i++){
             let producto = carrito[i];
             let item = document.createElement("li");
             item.className = "itemCarrito";
-            item.innerHTML =
-            "<span>" + producto.nombre + "</span>" +
-            "<button class='btnEliminar' data-indice='" + i + "'>X</button>";
+                item.innerHTML = "<span>" + producto.nombre + " x" + producto.cantidad + "</span>" +
+                "<div>" + "<button class='btnMenos' data-indice='" + i + "'>-</button>" +
+                "<button class='btnMas' data-indice='" + i + "'>+</button>" +
+                "<button class='btnEliminar' data-indice='" + i + "'>X</button>" +
+                "</div>";
             lista.appendChild(item);
         }
 
         let botonesEliminar = document.querySelectorAll(".btnEliminar");
-
         for(let boton of botonesEliminar){
             boton.addEventListener("click", function(){
                 let indice = boton.getAttribute("data-indice");
                 eliminarProducto(indice);
             });
-
         }
 
-    }
+        let botonesMas = document.querySelectorAll(".btnMas");
+        for(let boton of botonesMas){
+            boton.addEventListener("click", function(){
+                let indice = boton.getAttribute("data-indice");
+                carrito[indice].cantidad++;
+                actualizarCarrito();
+            });
+        }
 
+        let botonesMenos = document.querySelectorAll(".btnMenos");
+        for(let boton of botonesMenos){
+            boton.addEventListener("click", function(){
+                let indice = boton.getAttribute("data-indice");
+                carrito[indice].cantidad--;
+                
+                if(carrito[indice].cantidad == 0){
+                    eliminarProducto(indice);
+                }
+                else{
+                    actualizarCarrito();
+                }
+            });
+        }
+    }
     cantidad.textContent = carrito.length;
     total.textContent = "$" + calcularTotal();
     guardarCarrito();
@@ -147,7 +185,7 @@ function calcularTotal(){
     let total = 0;
 
     for(let producto of carrito){
-        total += producto.precio;
+        total += producto.precio * producto.cantidad;
     }
     return total;
 }
@@ -157,7 +195,7 @@ function comprar(){
         Swal.fire({
             icon:"info",
             title:"Carrito vacío",
-            text:"Agregá algún utensilio antes de comprar."
+            text:"Agregá algún producto antes de comprar."
         });
 
         return;
